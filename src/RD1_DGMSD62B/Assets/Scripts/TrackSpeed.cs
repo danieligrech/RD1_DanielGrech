@@ -10,7 +10,7 @@ public class TrackSpeed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        lastPosition = transform.position;
     }
 
     // Update is called once per frame
