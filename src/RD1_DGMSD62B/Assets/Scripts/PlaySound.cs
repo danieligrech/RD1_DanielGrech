@@ -25,8 +25,10 @@ public class PlaySound : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if(other.tag == "Drumstick Head")
         {
+            Debug.Log("Trigger");
             source.volume = other.gameObject.GetComponent<TrackSpeed>().speed;
             ActivateSound();
         }   
