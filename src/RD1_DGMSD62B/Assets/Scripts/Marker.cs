@@ -36,5 +36,8 @@ public class Marker : MonoBehaviour
     {
         GameObject tempGO = Instantiate(prefab, transform);
         tempGO.transform.localPosition = new Vector3(-0.5549f, 2.75f, 2.2f);  //The x and y coordinates should be left as they are unless changes to the backboard and marker positions are made.  The z coordinate is the z position of the marker at the end + 5 (-2.8 + 5)
+        //Note for point system: The cube takes 2 seconds to drop from the top of the board to the bottom of the board
+        iTween.MoveTo(tempGO, iTween.Hash("position", new Vector3(0.5549f, 2.75f, -2.8f), "time", 2f, "easeType", iTween.EaseType.linear, "isLocal", true));
+        Destroy(tempGO, 2f);
     }
 }
