@@ -24,6 +24,17 @@ public class Marker : MonoBehaviour
         if(Time.time > nextPlayTime)
         {
             nextPlayTime = Time.time + speed;
+            if(notation.Substring(currentNote, 1) != "0")
+            {
+                CreateNote();
+            }
+            currentNote++;
         }
+    }
+
+    void CreateNote()
+    {
+        GameObject tempGO = Instantiate(prefab, transform);
+        tempGO.transform.localPosition = new Vector3(-0.5549f, 2.75f, 2.2f);  //The x and y coordinates should be left as they are unless changes to the backboard and marker positions are made.  The z coordinate is the z position of the marker at the end + 5 (-2.8 + 5)
     }
 }
