@@ -29,7 +29,7 @@ public class Marker : MonoBehaviour
                 CreateNote();
             }
             currentNote++;
-            if(currentNote > notation.Length)
+            if(currentNote >= notation.Length)
             {
                 currentNote = 0;
             }
