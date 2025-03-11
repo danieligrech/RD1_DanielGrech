@@ -21,10 +21,16 @@ public class Marker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debugging starts here
+        if (string.IsNullOrEmpty(notation))
+        {
+            return;
+        }
+
         if(Time.time > nextPlayTime)
         {
             nextPlayTime = Time.time + speed;
-            if(notation.Substring(currentNote, 1) != "0")
+            if(currentNote < notation.Length && notation.Substring(currentNote, 1) != "0")
             {
                 CreateNote();
             }
