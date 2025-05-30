@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.rd1_dgmsd62b.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\Unity Projects\\RD1_DanielGrech\\src\\RD1_DGMSD62B\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "RD1_DGMSD62B [Testing]"
+        }
+      }
+    }
+  ]
+}
